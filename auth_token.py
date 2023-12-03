@@ -6,9 +6,8 @@ from dotenv import load_dotenv
 from requests import post
 
 load_dotenv()
-
-client_id = os.getenv("CLIENT_ID")
-client_secret = os.getenv("CLIENT_SECRET")
+client_id = os.getenv("CLIENT_ID_SPOTIFY")
+client_secret = os.getenv("CLIENT_SECRET_SPOTIFY")
 
 def get_token():
     auth_string = client_id + ":" + client_secret
@@ -22,9 +21,9 @@ def get_token():
     }
     data = {"grant_type": "client_credentials"}
     
-    result = post(url, headers=headers, data=data)
-    json_result = json.loads(result.content)
-    token = json_result["access_token"]
+    response = post(url, headers=headers, data=data)
+    json_response = response.json()
+    token = json_response["access_token"]
     
     return token
 
