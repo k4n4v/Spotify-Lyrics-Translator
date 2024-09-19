@@ -62,7 +62,6 @@ def translate_text(text, target_language):
         batches = split_text(text)
         translated_batches = []
 
-        # Translate each batch and store the result
         for batch in batches:
             translated_batch = GoogleTranslator(source='auto', target=target_language).translate(batch)
             translated_batches.append(translated_batch)
