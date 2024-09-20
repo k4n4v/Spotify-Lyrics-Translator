@@ -23,11 +23,7 @@ def get_lyrics(track_name, track_artist):
     if index != -1:
         # Get lyrics starting after "Lyrics"
         lyrics = lyrics[index + len(search_phrase):].strip()
-    
-    # Remove "6Embed" from the end if it is present 
-    if lyrics.endswith("6Embed"):
-        lyrics = lyrics.rsplit("6Embed", 1)[0].strip()
-    
+        
     return lyrics
 
 
@@ -54,7 +50,6 @@ def split_text(text, max_length=5000):
         batches.append("\n".join(current_batch))
 
     return batches
-
 
 
 def translate_text(text, target_language):

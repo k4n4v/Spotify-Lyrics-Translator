@@ -19,6 +19,8 @@ if st.button("Translate"):
         lyrics = get_lyrics(track_name, track_artist)
         translated_text = translate_text(lyrics, languages[selected_language])
         
+        st.subheader(f"Translating '{track_name}' by {track_artist}")
+        
         col1, col2 = st.columns(2)
         
         with col1:
