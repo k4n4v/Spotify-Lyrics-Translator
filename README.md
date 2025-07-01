@@ -54,7 +54,12 @@ Before installing and running the project, make sure you have the following:
     pip install -r requirements.txt
     ```
 
-4. Open the `.env` file with a text editor and add your Genius API Client Access Token, Spotify Client ID, and Spotify Client Secret
+4. Create a `.env` file with your Genius API Client Access Token, Spotify Client ID, and Spotify Client Secret:
+    ```bash
+    SPOTIFY_CLIENT_ID = ""
+    SPOTIFY_CLIENT_SECRET = ""
+    GENIUS_CLIENT_ACCESS_TOKEN = ""
+    ```
 
 ## Usage
 1. Run the application:
